@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace EESSI.SED
+namespace EESSI.SED.Common
 {
     [XmlRoot(Namespace = Namespaces.StandardBusinessDocumentHeader)]
     public class StandardBusinessDocument

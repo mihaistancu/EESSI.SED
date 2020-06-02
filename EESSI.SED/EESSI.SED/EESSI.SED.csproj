@@ -40,12 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StandardBusinessDocument.cs" />
-    <Compile Include="Namespaces.cs" />
-    <Compile Include="ObjectToXml.cs" />
+    <Compile Include="Common\BusinessScope.cs" />
+    <Compile Include="Common\CaseId.cs" />
+    <Compile Include="Common\DocumentIdentification.cs" />
+    <Compile Include="Common\Identifier.cs" />
+    <Compile Include="Common\Participant.cs" />
+    <Compile Include="Common\Namespaces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StandardBusinessDocumentHeader.cs" />
+    <Compile Include="Common\StandardBusinessDocumentHeader.cs" />
+    <Compile Include="SYN001\AccessPoint.cs" />
+    <Compile Include="SYN001\CentralServicesNode.cs" />
+    <Compile Include="SYN001\Certificate.cs" />
+    <Compile Include="SYN001\Institution.cs" />
+    <Compile Include="SYN001\InstitutionRepository.cs" />
+    <Compile Include="SYN001\IRSync.cs" />
+    <Compile Include="Common\StandardBusinessDocument.cs" />
+    <Compile Include="SYN001\StandardBusinessDocument.cs" />
+    <Compile Include="SYN001\StandardElectronicDocument.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

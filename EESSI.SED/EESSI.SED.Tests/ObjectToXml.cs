@@ -1,7 +1,8 @@
 ﻿using System.Xml;
 using System.Xml.Serialization;
+using EESSI.SED.Common;
 
-namespace EESSI.SED
+namespace EESSI.SED.Tests
 {
     public class ObjectToXml
     {

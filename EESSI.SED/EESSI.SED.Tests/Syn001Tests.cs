@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using EESSI.SED.Common;
+using EESSI.SED.SYN001;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EESSI.SED.Tests
@@ -9,7 +12,7 @@ namespace EESSI.SED.Tests
         [TestMethod]
         public void Syn001IsCreatedSuccessfully()
         {
-            var sed = new StandardBusinessDocument
+            var sed = new SYN001.StandardBusinessDocument
             {
                 SchemaLocation = "Schema-Location",
                 StandardBusinessDocumentHeader = new StandardBusinessDocumentHeader
@@ -51,8 +54,32 @@ namespace EESSI.SED.Tests
                             BusinessServiceName = "SYNC_SUC_01:4.2"
                         }
                     }
+                },
+                SYN001 = new StandardElectronicDocument
+                {
+                    IRSync = new IRSync
+                    {
+                        version = "4.1.2",
+                        InstitutionRepository = new InstitutionRepository
+                        {
+                            CentralServicesNode = new CentralServicesNode
+                            {
+
+                            },
+                            Institutions = new List<Institution>
+                            {
+
+                            },
+                            AccessPoints = new List<AccessPoint>
+                            {
+
+                            },
+                            Certificates = new List<Certificate>()
+                        }
+                    }
                 }
             };
+            
             var xml = ObjectToXml.Serialize(sed);
             Assert.IsNotNull(xml);
         }
