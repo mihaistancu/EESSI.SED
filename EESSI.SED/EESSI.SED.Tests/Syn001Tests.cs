@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml;
 using EESSI.SED.Common;
 using EESSI.SED.SYN001;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -10,7 +11,7 @@ namespace EESSI.SED.Tests
     public class Syn001Tests
     {
         [TestMethod]
-        public void Syn001IsCreatedSuccessfully()
+        public void SerializationIsSuccessful()
         {
             var sed = new SYN001.StandardBusinessDocument
             {
@@ -64,7 +65,32 @@ namespace EESSI.SED.Tests
                         {
                             CentralServicesNode = new CentralServicesNode
                             {
-
+                                officialID = "EU:CSN01",
+                                EbMsSignatureCertificates = new List<EbMSSignatureCertificate>
+                                {
+                                    new EbMSSignatureCertificate
+                                    {
+                                        CertificateIdentification = new CertificateIdentification
+                                        {
+                                            thumbprint = "DE1FA39A3BA20440F12162B887E22735A7F33EEC"
+                                        }
+                                    }
+                                },
+                                TLSCertificates = new List<TLSCertificate>
+                                {
+                                    new TLSCertificate
+                                    {
+                                        CertificateIdentification = new CertificateIdentification
+                                        {
+                                            thumbprint = "79BA43BD53EE6ED07A719498B0DD7356285D39C2"
+                                        }
+                                    }
+                                },
+                                SystemMessageEndpoint = new SystemMessageEndpoint
+                                {
+                                    channel = "https://eessidev24.eessi.be/EESSI/",
+                                    messageExchangePattern = "PUSH"
+                                }
                             },
                             Institutions = new List<Institution>
                             {
@@ -82,6 +108,14 @@ namespace EESSI.SED.Tests
             
             var xml = ObjectToXml.Serialize(sed);
             Assert.IsNotNull(xml);
+        }
+
+        [TestMethod]
+        public void DeserializationIsSuccessful()
+        {
+            var xml = new XmlDocument();
+            xml.Load("SYN001.xml");
+            var doc = XmlToObject.Deserialize<StandardBusinessDocument>(xml);
         }
     }
 }

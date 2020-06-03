@@ -4,6 +4,7 @@ namespace EESSI.SED.Common
 {
     public class Identifier
     {
+        [XmlAttribute]
         public string Authority { get; set; }
 
         [XmlText]

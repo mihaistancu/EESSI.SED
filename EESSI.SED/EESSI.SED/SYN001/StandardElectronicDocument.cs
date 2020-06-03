@@ -2,9 +2,9 @@
 
 namespace EESSI.SED.SYN001
 {
-    [XmlRoot(Namespace = "http://ec.europa.eu/eessi/ns/4_2/SYN001")]
     public class StandardElectronicDocument
     {
+        [XmlElement(Namespace = "")]
         public IRSync IRSync { get; set; }
     }
 }

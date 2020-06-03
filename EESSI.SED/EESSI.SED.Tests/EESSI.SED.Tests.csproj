@@ -54,6 +54,7 @@
     <Compile Include="ObjectToXml.cs" />
     <Compile Include="Syn001Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlToObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SYN001.xml">

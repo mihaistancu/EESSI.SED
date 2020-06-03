@@ -51,12 +51,15 @@
     <Compile Include="SYN001\AccessPoint.cs" />
     <Compile Include="SYN001\CentralServicesNode.cs" />
     <Compile Include="SYN001\Certificate.cs" />
+    <Compile Include="SYN001\CertificateIdentification.cs" />
+    <Compile Include="SYN001\EbMSSignatureCertificate.cs" />
     <Compile Include="SYN001\Institution.cs" />
     <Compile Include="SYN001\InstitutionRepository.cs" />
     <Compile Include="SYN001\IRSync.cs" />
-    <Compile Include="Common\StandardBusinessDocument.cs" />
     <Compile Include="SYN001\StandardBusinessDocument.cs" />
     <Compile Include="SYN001\StandardElectronicDocument.cs" />
+    <Compile Include="SYN001\SystemMessageEndpoint.cs" />
+    <Compile Include="SYN001\TLSCertificate.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
