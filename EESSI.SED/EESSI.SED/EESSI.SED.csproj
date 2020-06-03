@@ -49,17 +49,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\StandardBusinessDocumentHeader.cs" />
     <Compile Include="SYN001\AccessPoint.cs" />
+    <Compile Include="SYN001\BUCType.cs" />
+    <Compile Include="SYN001\BusinessSignatureCertificate.cs" />
     <Compile Include="SYN001\CentralServicesNode.cs" />
     <Compile Include="SYN001\Certificate.cs" />
     <Compile Include="SYN001\CertificateIdentification.cs" />
+    <Compile Include="SYN001\Competence.cs" />
+    <Compile Include="SYN001\ContactDetails.cs" />
+    <Compile Include="SYN001\ContactInfo.cs" />
+    <Compile Include="SYN001\StringValue.cs" />
     <Compile Include="SYN001\EbMSSignatureCertificate.cs" />
+    <Compile Include="SYN001\EmailAddress.cs" />
+    <Compile Include="SYN001\ExternalTLSCertificate.cs" />
+    <Compile Include="SYN001\FaxNumber.cs" />
+    <Compile Include="SYN001\Indicator.cs" />
     <Compile Include="SYN001\Institution.cs" />
+    <Compile Include="SYN001\InstitutionIdentification.cs" />
     <Compile Include="SYN001\InstitutionRepository.cs" />
+    <Compile Include="SYN001\InternalTLSCertificate.cs" />
     <Compile Include="SYN001\IRSync.cs" />
+    <Compile Include="SYN001\LinkedInstitution.cs" />
+    <Compile Include="SYN001\PhoneNumber.cs" />
+    <Compile Include="SYN001\PostalAddress.cs" />
+    <Compile Include="SYN001\Relation.cs" />
     <Compile Include="SYN001\StandardBusinessDocument.cs" />
     <Compile Include="SYN001\StandardElectronicDocument.cs" />
-    <Compile Include="SYN001\SystemMessageEndpoint.cs" />
+    <Compile Include="SYN001\Endpoint.cs" />
     <Compile Include="SYN001\TLSCertificate.cs" />
+    <Compile Include="SYN001\Translation.cs" />
+    <Compile Include="SYN001\URL.cs" />
+    <Compile Include="SYN001\ValidityPeriod.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
